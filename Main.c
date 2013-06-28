@@ -77,8 +77,7 @@ void IntHandlerHigh (void)				//Re-Map here
 	if( PIR1bits.SSPIF ) 
 	{
 		Service_SPI();
-	}else{
-    	_asm goto INT_HIGH_OFFS _endasm
+	}
  	}   	
 //	if( PIR1bits.SSPIF ) 
 //	{
@@ -124,11 +123,6 @@ void main(void)
 	OSCCONbits.IRCF0 = 1;	//Run the internal oscillator at 8Mhz (if we have no external 8mHz)
 	OSCCONbits.IRCF1 = 1;
 	OSCCONbits.IRCF2 = 1;
-		
-	ExecCodeOK = ExecCodePresent();						//Check we have some ExecCode programmed. 
-	
-	if( ExecCodeOK )
-		(*jump_table[FN_EXECINIT])( Data.ADR.Adr32, &Data );			//Initialize the ExecCode section.
 		
 	Rtn = SSPBUF;									//Clear BF
  	SSPBUF = 0x00;           						// initiate bus cycle

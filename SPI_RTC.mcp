@@ -8,7 +8,7 @@ dir_src=
 dir_bin=_output
 dir_tmp=_output
 dir_sin=
-dir_inc=.\include;.\Common;..\Common;..\include
+dir_inc=C:\Program Files (x86)\Microchip\MCC18\h;.\include;.\Common;..\Common;..\include
 dir_lib=c:\mcc18\lib
 dir_lkr=
 [CAT_FILTERS]
@@ -58,7 +58,7 @@ file_003=common\ExecCodeVar.h
 file_004=common\GenericTypeDefs.h
 file_005=include\Main.h
 file_006=include\ConfigBits.h
-file_007=18f4550_Sub_Admin.lkr
+file_007=18f46j53_main.lkr
 [SUITE_INFO]
 suite_guid={5B7D72DD-9861-47BD-9F60-2BE967BF8416}
 suite_state=
